@@ -1,32 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, TextInput, Image,TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, Image } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.containerApp}>
       <View>
         <View style={styles.topoDaTela}>
-          <Text style={styles.titulo}>Cadastre-se</Text>
-          <TouchableOpacity>
-            <Image source={require('./arrowBack.png')} style={styles.arrow} />
-          </TouchableOpacity>
+          <Text style={styles.titulo}>Arborização Chapecó</Text>
+          <Image source={require('./logo.png')} style={styles.logo} /> 
         </View>
-        <View style={styles.meioDaTela}>
+      </View>
+      <View style={styles.meioDaTela}>
           <View style={styles.containerInput}>
-            <View style={styles.divUsu}></View>
-              <TextInput style={styles.senha} placeholder='Nome Completo'/>
-              <View style={styles.divUsu}></View>
-              <TextInput style={styles.senha} placeholder='E-mail'/>
-              <View style={styles.divUsu}></View>
-              <TextInput style={styles.senha} placeholder='Senha'/>
-              <View style={styles.divUsu}></View>
-              <TextInput style={styles.senha} placeholder='Confirme a senha'/>
-              <View style={styles.divUsu}></View>
-              <View style={styles.divBotao}>
-                <Button style={styles.botaoLogin} title='Continuar' color='black'/>
-              </View>
+            <View style={styles.divUsu}><TextInput style={styles.usuario} placeholder='Usuario'/></View>
+            <TextInput style={styles.senha} placeholder='Senha'/>
           </View>
-        </View>
+          <Button style={styles.botaoLogin} title='Login' color='black'/>
       </View>
     </View>
   );
@@ -42,61 +31,70 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
   },
   topoDaTela:{
-    backgroundColor:'white',
-    width: '80%',
-    height:'10%',
-    marginLeft: '10%',
-    borderRadius: '10%'
-  },
-  meioDaTela:{
-    marginTop:'30%',
-    marginLeft: '10%',
-    height: '60%',
-    width: '80%',
+    marginTop:'20%',
+    height: '56%',
     flexDirection: 'column',
     justifyContent: 'space-around',
-    backgroundColor: 'white',
-    borderRadius: '10%',
   },
-
+  meioDaTela: {
+    height: '30%',
+    flexDirection: 'column',
+    //backgroundColor: '#4F7942',
+    justifyContent: 'space-around',
+    alignItems: 'stretch',
+    marginBottom: '40%'
+  },
   titulo: {
-    fontSize: '25%',
-    marginLeft: '30%',
-    marginTop: '7%',
+    fontSize: '30%',
+    marginLeft: '13%',
   },
   botaoLogin: {
     borderRadius: '10%',
   },
-
+  usuario: {
+    borderWidth:1,
+    borderColor:'black',
+    backgroundColor: 'white',
+    fontWeight: 'bold',
+    height: '100%',
+    width:'80%',
+    padding: 10,
+    shadowColor: 'black',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+  },
   senha: {
     borderWidth:1,
     borderColor:'black',
-    width: '90%',
-    height: '15%',
+    width: '80%',
+    height: '30%',
+    marginRight: '2%',
     backgroundColor: 'white',
     fontWeight: 'bold',
-    padding: 10
+    padding: 10,
+    shadowColor: 'black',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
   },
   containerInput: {
     marginTop: '10%',
-    marginLeft: '10%',
+    marginLeft: '15%',
   },
 
-  arrow:{
-    width:'15%',
-    height:'64%',
-    marginLeft: '5%',
-    marginTop: '-7%',
-  },
-
-  baixoDaTela:{
-
+  logo:{
+    width:'50%',
+    height:'60%',
+    marginLeft: '25%',
+    marginTop: '10%',
+    shadowColor: 'black',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
   },
   divUsu:{
-    height:'5%',
+    height:'42%',
     paddingBottom:'5%',
-  },
-  divBotao:{
-    marginRight:'15%',
   },
 });
