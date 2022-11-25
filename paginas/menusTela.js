@@ -10,9 +10,25 @@ export default function App() {
             <Image source={require('./logo.png')} style={styles.arrow} />
         </TouchableOpacity>
       </View>
-      <View style={styles.listaPlantas}>
+      <View style={styles.meioTela}>
+        <TouchableOpacity>
+          <View style={styles.listaPlantas}>
+              <View style={styles.divBotoes}>
+                <Image source={require('./qrCode.png')} style={styles.qrCode} />
+                <Text>Leitor de QR Code</Text>
+              </View>
+          </View>
+        </TouchableOpacity>
       </View>
-      <View style={styles.leitorQrCod}>
+      <View style={styles.meioTela2}>
+        <TouchableOpacity>
+          <View style={styles.leitorQrCod}>
+            <View style={styles.divBotoes}>
+              <Image source={require('./listIcon.png')} style={styles.listIcon} />
+              <Text>Lista de Arvores na Região</Text>
+            </View>
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -27,13 +43,23 @@ const styles = StyleSheet.create({
     backgroundColor: '#8fbc8f',
     alignItems: 'stretch',
   },
+  meioTela:{
+    height: '25%',
+    width:'100%',
+    marginTop:'30%',
+  },
+  meioTela2:{
+    height: '25%',
+    width:'100%',
+    marginBottom:'50%'
+  }
+  ,
   listaPlantas:{
     backgroundColor:'white',
     width: '80%',
-    height:'20%',
+    height:'90%',
     marginLeft: '10%',
     borderRadius: '10%',
-    marginTop:'20%',
     shadowColor: 'black',
     shadowOffset: {width: -2, height: 4},
     shadowOpacity: 0.5,
@@ -42,10 +68,9 @@ const styles = StyleSheet.create({
   leitorQrCod:{
     backgroundColor:'white',
     width: '80%',
-    height:'20%',
+    height:'90%',
     marginLeft: '10%',
     borderRadius: '10%',
-    marginBottom: '50%',
     shadowColor: 'black',
     shadowOffset: {width: -2, height: 4},
     shadowOpacity: 0.5,
@@ -57,11 +82,16 @@ const styles = StyleSheet.create({
     height:'11%',
     marginLeft: '10%',
     borderRadius: '10%',
-    marginTop: '20%',
+    marginTop: '10%',
     shadowColor: 'black',
     shadowOffset: {width: -2, height: 4},
     shadowOpacity: 0.5,
     shadowRadius: 3,
+  },
+  divBotoes:{
+    height: '100%',
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   titulo: {
     fontSize: '25%',
@@ -73,6 +103,18 @@ const styles = StyleSheet.create({
     height:'105%',
     marginLeft: '5%',
     marginTop: '-12%',
+  },
+  qrCode:{
+    width:'20%',
+    height:'40%',
+    marginLeft: '5%',
+    marginRight: '10%',
+  },
+  listIcon:{
+    width:'20%',
+    height:'40%',
+    marginLeft: '5%',
+    marginRight: '10%',
   },
 
 });

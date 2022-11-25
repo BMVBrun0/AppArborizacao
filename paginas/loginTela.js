@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     height: '100%',
     flexDirection: 'column',
     justifyContent: 'space-around',
-    backgroundColor: '#D0D3D4',
+    backgroundColor: '#8fbc8f',
     alignItems: 'stretch',
   },
   topoDaTela:{
@@ -59,6 +59,10 @@ const styles = StyleSheet.create({
     height: '100%',
     width:'80%',
     padding: 10,
+    shadowColor: 'black',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
   },
   senha: {
     borderWidth:1,
@@ -68,7 +72,11 @@ const styles = StyleSheet.create({
     marginRight: '2%',
     backgroundColor: 'white',
     fontWeight: 'bold',
-    padding: 10
+    padding: 10,
+    shadowColor: 'black',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
   },
   containerInput: {
     marginTop: '10%',
@@ -80,9 +88,10 @@ const styles = StyleSheet.create({
     height:'60%',
     marginLeft: '25%',
     marginTop: '10%',
-  },
-  baixoDaTela:{
-
+    shadowColor: 'black',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
   },
   divUsu:{
     height:'42%',

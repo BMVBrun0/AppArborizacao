@@ -1,21 +1,34 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, TextInput, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, Image,TouchableOpacity } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.containerApp}>
-      <View>
-        <View style={styles.topoDaTela}>
-          <Text style={styles.titulo}>Arborização Chapecó</Text>
-          <Image source={require('./logo.png')} style={styles.logo} /> 
-        </View>
+      <View style={styles.topoDaTela}>
+        <Text style={styles.titulo}>App Arborização</Text>
+        <TouchableOpacity>
+            <Image source={require('./logo.png')} style={styles.arrow} />
+        </TouchableOpacity>
       </View>
-      <View style={styles.meioDaTela}>
-          <View style={styles.containerInput}>
-            <View style={styles.divUsu}><TextInput style={styles.usuario} placeholder='Usuario'/></View>
-            <TextInput style={styles.senha} placeholder='Senha'/>
+      <View style={styles.meioTela}>
+        <TouchableOpacity>
+          <View style={styles.listaPlantas}>
+              <View style={styles.divBotoes}>
+                <Image source={require('./qrCode.png')} style={styles.qrCode} />
+                <Text>Leitor de QR Code</Text>
+              </View>
           </View>
-          <Button style={styles.botaoLogin} title='Login' color='black'/>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.meioTela2}>
+        <TouchableOpacity>
+          <View style={styles.leitorQrCod}>
+            <View style={styles.divBotoes}>
+              <Image source={require('./listIcon.png')} style={styles.listIcon} />
+              <Text>Lista de Arvores na Região</Text>
+            </View>
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -30,71 +43,78 @@ const styles = StyleSheet.create({
     backgroundColor: '#8fbc8f',
     alignItems: 'stretch',
   },
-  topoDaTela:{
-    marginTop:'20%',
-    height: '56%',
-    flexDirection: 'column',
-    justifyContent: 'space-around',
+  meioTela:{
+    height: '25%',
+    width:'100%',
+    marginTop:'30%',
   },
-  meioDaTela: {
-    height: '30%',
-    flexDirection: 'column',
-    //backgroundColor: '#4F7942',
-    justifyContent: 'space-around',
-    alignItems: 'stretch',
-    marginBottom: '40%'
-  },
-  titulo: {
-    fontSize: '30%',
-    marginLeft: '13%',
-  },
-  botaoLogin: {
-    borderRadius: '10%',
-  },
-  usuario: {
-    borderWidth:1,
-    borderColor:'black',
-    backgroundColor: 'white',
-    fontWeight: 'bold',
-    height: '100%',
-    width:'80%',
-    padding: 10,
-    shadowColor: 'black',
-    shadowOffset: {width: -2, height: 4},
-    shadowOpacity: 0.3,
-    shadowRadius: 3,
-  },
-  senha: {
-    borderWidth:1,
-    borderColor:'black',
+  meioTela2:{
+    height: '25%',
+    width:'100%',
+    marginBottom:'50%'
+  }
+  ,
+  listaPlantas:{
+    backgroundColor:'white',
     width: '80%',
-    height: '30%',
-    marginRight: '2%',
-    backgroundColor: 'white',
-    fontWeight: 'bold',
-    padding: 10,
+    height:'90%',
+    marginLeft: '10%',
+    borderRadius: '10%',
     shadowColor: 'black',
     shadowOffset: {width: -2, height: 4},
-    shadowOpacity: 0.3,
+    shadowOpacity: 0.5,
     shadowRadius: 3,
   },
-  containerInput: {
-    marginTop: '10%',
-    marginLeft: '15%',
+  leitorQrCod:{
+    backgroundColor:'white',
+    width: '80%',
+    height:'90%',
+    marginLeft: '10%',
+    borderRadius: '10%',
+    shadowColor: 'black',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
   },
-
-  logo:{
-    width:'50%',
-    height:'60%',
-    marginLeft: '25%',
+  topoDaTela:{
+    backgroundColor:'white',
+    width: '80%',
+    height:'11%',
+    marginLeft: '10%',
+    borderRadius: '10%',
     marginTop: '10%',
     shadowColor: 'black',
     shadowOffset: {width: -2, height: 4},
     shadowOpacity: 0.5,
     shadowRadius: 3,
   },
-  divUsu:{
-    height:'42%',
-    paddingBottom:'5%',
+  divBotoes:{
+    height: '100%',
+    flexDirection: 'row',
+    alignItems: 'center'
   },
+  titulo: {
+    fontSize: '25%',
+    marginLeft: '30%',
+    marginTop: '10%',
+  },
+  arrow:{
+    width:'20%',
+    height:'105%',
+    marginLeft: '5%',
+    marginTop: '-12%',
+  },
+  qrCode:{
+    width:'20%',
+    height:'40%',
+    marginLeft: '5%',
+    marginRight: '10%',
+  },
+  listIcon:{
+    width:'20%',
+    height:'40%',
+    marginLeft: '5%',
+    marginRight: '10%',
+  },
+
 });
