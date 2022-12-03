@@ -1,13 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, TextInput, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, Image, NavigationContainer, Alert} from 'react-native';
 
-export default function App() {
+
+export default function LoginTela() {
+  const login = () => {Alert.alert('teste')}
   return (
     <View style={styles.containerApp}>
       <View>
         <View style={styles.topoDaTela}>
           <Text style={styles.titulo}>Arborização Chapecó</Text>
-          <Image source={require('./logo.png')} style={styles.logo} /> 
+          <Image source={require('../logo.png')} style={styles.logo} /> 
         </View>
       </View>
       <View style={styles.meioDaTela}>
@@ -15,11 +17,27 @@ export default function App() {
             <View style={styles.divUsu}><TextInput style={styles.usuario} placeholder='Usuario'/></View>
             <TextInput style={styles.senha} placeholder='Senha'/>
           </View>
-          <Button style={styles.botaoLogin} title='Login' color='black'/>
+          <Button style={styles.botaoLogin} title='Login' color='black' onPress={login}/>
       </View>
     </View>
   );
 }
+
+
+// const MyStack = () => {
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator>
+//         <Stack.Screen
+//           name="Home"
+//           component={HomeScreen}
+//           options={{ title: 'Welcome' }}
+//         />
+//         <Stack.Screen name="Profile" component={ProfileScreen} />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// };
 
 const styles = StyleSheet.create({
   containerApp: {

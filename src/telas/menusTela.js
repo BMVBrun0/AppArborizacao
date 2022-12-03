@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, TextInput, Image,TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, Image,TouchableOpacity,NavigationContainer } from 'react-native';
 
-export default function App() {
+export function MenusTela() {
   return (
     <View style={styles.containerApp}>
       <View style={styles.topoDaTela}>

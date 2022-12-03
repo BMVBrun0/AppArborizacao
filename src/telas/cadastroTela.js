@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, TextInput, Image,TouchableOpacity } from 'react-native';
 
-export default function App() {
+export function CadastroTelas() {
   return (
     <View style={styles.containerApp}>
       <View>
