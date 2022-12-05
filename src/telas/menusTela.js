@@ -1,20 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, TextInput, Image,TouchableOpacity,NavigationContainer } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, Image, TouchableOpacity, NavigationContainer } from 'react-native';
 
-export function MenusTela() {
+export function MenusTela({navigation}) {
+  function qrCodeScanner() {
+    navigation.navigate('QrCode')
+  }
   return (
     <View style={styles.containerApp}>
       <View style={styles.topoDaTela}>
         <Text style={styles.titulo}>App Arborização</Text>
         <TouchableOpacity>
-            <Image source={require('./logo.png')} style={styles.arrow} />
+            <Image source={require('../../assets/imagens/logo.png')} style={styles.arrow} />
         </TouchableOpacity>
       </View>
       <View style={styles.meioTela}>
-        <TouchableOpacity>
+        <TouchableOpacity 
+          onPress={qrCodeScanner}
+        >
           <View style={styles.listaPlantas}>
               <View style={styles.divBotoes}>
-                <Image source={require('./qrCode.png')} style={styles.qrCode} />
+                <Image source={require('../../assets/imagens/qrCode.png')} style={styles.qrCode} />
                 <Text>Leitor de QR Code</Text>
               </View>
           </View>
@@ -24,7 +29,7 @@ export function MenusTela() {
         <TouchableOpacity>
           <View style={styles.leitorQrCod}>
             <View style={styles.divBotoes}>
-              <Image source={require('./listIcon.png')} style={styles.listIcon} />
+              <Image source={require('../../assets/imagens/listIcon.png')} style={styles.listIcon} />
               <Text>Lista de Arvores na Região</Text>
             </View>
           </View>
@@ -79,7 +84,7 @@ const styles = StyleSheet.create({
   topoDaTela:{
     backgroundColor:'white',
     width: '80%',
-    height:'11%',
+    height:'13%',
     marginLeft: '10%',
     borderRadius: '10%',
     marginTop: '10%',

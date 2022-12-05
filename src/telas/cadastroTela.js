@@ -1,14 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, TextInput, Image,TouchableOpacity } from 'react-native';
 
-export function CadastroTelas() {
+export function CadastroTelas({navigation}) {
+  function criarUsuario() {
+    navigation.navigate('MenusTela')
+  }
   return (
     <View style={styles.containerApp}>
       <View>
         <View style={styles.topoDaTela}>
           <Text style={styles.titulo}>Cadastre-se</Text>
           <TouchableOpacity>
-            <Image source={require('./arrowBack.png')} style={styles.arrow} />
+            <Image source={require('../../assets/imagens/arrowBack.png')} style={styles.arrow} />
           </TouchableOpacity>
         </View>
         <View style={styles.meioDaTela}>
@@ -23,7 +26,7 @@ export function CadastroTelas() {
               <TextInput style={styles.senha} placeholder='Confirme a senha'/>
               <View style={styles.divUsu}></View>
               <View style={styles.divBotao}>
-                <Button style={styles.botaoLogin} title='Continuar' color='black'/>
+                <Button style={styles.botaoLogin} title='Continuar' color='black' onPress={criarUsuario}/>
               </View>
           </View>
         </View>

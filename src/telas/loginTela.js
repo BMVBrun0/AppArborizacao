@@ -1,43 +1,39 @@
 import { StatusBar } from 'expo-status-bar';
+import { useState } from 'react';
 import { StyleSheet, Text, View, Button, TextInput, Image, NavigationContainer, Alert} from 'react-native';
 
+export function LoginTela({navigation}) {
+  const [text, setText] = useState('');
 
-export default function LoginTela() {
-  const login = () => {Alert.alert('teste')}
+  function fazerLogin() {
+    if (condition) {
+      
+    }
+    navigation.navigate('CadastroTelas')
+  }
   return (
     <View style={styles.containerApp}>
       <View>
         <View style={styles.topoDaTela}>
           <Text style={styles.titulo}>Arborização Chapecó</Text>
-          <Image source={require('../logo.png')} style={styles.logo} /> 
+          <Image source={require('../../assets/imagens/logo.png')} style={styles.logo} /> 
         </View>
       </View>
       <View style={styles.meioDaTela}>
           <View style={styles.containerInput}>
             <View style={styles.divUsu}><TextInput style={styles.usuario} placeholder='Usuario'/></View>
-            <TextInput style={styles.senha} placeholder='Senha'/>
+            <TextInput 
+              style={styles.senha} 
+              placeholder='Senha'
+              onChangeText={newText => setText(newText)}
+              defaultValue={text}
+            />
           </View>
-          <Button style={styles.botaoLogin} title='Login' color='black' onPress={login}/>
+          <Button style={styles.botaoLogin} title='Login' color='black' onPress={fazerLogin}/>
       </View>
     </View>
   );
 }
-
-
-// const MyStack = () => {
-//   return (
-//     <NavigationContainer>
-//       <Stack.Navigator>
-//         <Stack.Screen
-//           name="Home"
-//           component={HomeScreen}
-//           options={{ title: 'Welcome' }}
-//         />
-//         <Stack.Screen name="Profile" component={ProfileScreen} />
-//       </Stack.Navigator>
-//     </NavigationContainer>
-//   );
-// };
 
 const styles = StyleSheet.create({
   containerApp: {
@@ -50,7 +46,7 @@ const styles = StyleSheet.create({
   },
   topoDaTela:{
     marginTop:'20%',
-    height: '56%',
+    height: '59%',
     flexDirection: 'column',
     justifyContent: 'space-around',
   },

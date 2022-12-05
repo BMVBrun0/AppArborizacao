@@ -1,11 +1,19 @@
 import { createNativeStackNavigator} from "@react-navigation/native-stack";
 const {Screen, Navigator} = createNativeStackNavigator();
 
+
 import {MenusTela} from '../telas/menusTela';
 import {CadastroTelas} from '../telas/cadastroTela';
+import {LoginTela} from '../telas/loginTela'
+import {QrCode} from '../telas/qrCodeScanner'
+
 export function StackRoutes(){
     return (
         <Navigator>
+            <Screen
+                name="LoginTela"
+                component={LoginTela}
+            />
             <Screen
                 name="MenusTela"
                 component={MenusTela}
@@ -13,6 +21,10 @@ export function StackRoutes(){
             <Screen
                 name="CadastroTelas"
                 component={CadastroTelas}
+            />
+            <Screen
+                name="QrCode"
+                component={QrCode}
             />
         </Navigator>
     );
