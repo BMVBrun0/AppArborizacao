@@ -5,12 +5,17 @@ export function CadastroTelas({navigation}) {
   function criarUsuario() {
     navigation.navigate('MenusTela')
   }
+  function voltar(){
+    navigation.goBack()
+  }
   return (
     <View style={styles.containerApp}>
       <View>
         <View style={styles.topoDaTela}>
           <Text style={styles.titulo}>Cadastre-se</Text>
-          <TouchableOpacity>
+          <TouchableOpacity
+          onPress={voltar}
+          >
             <Image source={require('../../assets/imagens/arrowBack.png')} style={styles.arrow} />
           </TouchableOpacity>
         </View>

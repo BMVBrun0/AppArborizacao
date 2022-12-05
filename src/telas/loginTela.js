@@ -3,13 +3,18 @@ import { useState } from 'react';
 import { StyleSheet, Text, View, Button, TextInput, Image, NavigationContainer, Alert} from 'react-native';
 
 export function LoginTela({navigation}) {
-  const [text, setText] = useState('');
+  const [login, setLogin] = useState("");
+  const [senha, setSenha] = useState("");
+
 
   function fazerLogin() {
-    if (condition) {
-      
+    if (login == "bruno" && senha == "bruno123") {
+      navigation.navigate('CadastroTelas')
     }
-    navigation.navigate('CadastroTelas')
+    else
+      {
+        Alert.alert('Login ou Senha incorreto')
+      }
   }
   return (
     <View style={styles.containerApp}>
@@ -21,13 +26,18 @@ export function LoginTela({navigation}) {
       </View>
       <View style={styles.meioDaTela}>
           <View style={styles.containerInput}>
-            <View style={styles.divUsu}><TextInput style={styles.usuario} placeholder='Usuario'/></View>
-            <TextInput 
-              style={styles.senha} 
-              placeholder='Senha'
-              onChangeText={newText => setText(newText)}
-              defaultValue={text}
-            />
+            <View style={styles.divUsu}>
+              <TextInput 
+                style={styles.usuario} 
+                placeholder='Usuario'
+                onSubmitEditing={(value) => setLogin(value.nativeEvent.text)}
+              />
+            </View>
+              <TextInput 
+                style={styles.senha} 
+                placeholder='Senha'
+                onSubmitEditing={(value) => setSenha(value.nativeEvent.text)}
+              />
           </View>
           <Button style={styles.botaoLogin} title='Login' color='black' onPress={fazerLogin}/>
       </View>

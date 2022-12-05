@@ -9,7 +9,7 @@ import {QrCode} from '../telas/qrCodeScanner'
 
 export function StackRoutes(){
     return (
-        <Navigator>
+        <Navigator screenOptions={{ headerShown: false }}>
             <Screen
                 name="LoginTela"
                 component={LoginTela}
