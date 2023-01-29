@@ -5,6 +5,9 @@ export function MenusTela({navigation}) {
   function qrCodeScanner() {
     navigation.navigate('QrCode')
   }
+  function listaDeArvores(){
+    navigation.navigate('ListaDeArvores')
+  }
   return (
     <View style={styles.containerApp}>
       <View style={styles.topoDaTela}>
@@ -26,7 +29,7 @@ export function MenusTela({navigation}) {
         </TouchableOpacity>
       </View>
       <View style={styles.meioTela2}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={listaDeArvores}>
           <View style={styles.leitorQrCod}>
             <View style={styles.divBotoes}>
               <Image source={require('../../assets/imagens/listIcon.png')} style={styles.listIcon} />

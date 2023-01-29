@@ -4,8 +4,9 @@ const {Screen, Navigator} = createNativeStackNavigator();
 
 import {MenusTela} from '../telas/menusTela';
 import {CadastroTelas} from '../telas/cadastroTela';
-import {LoginTela} from '../telas/loginTela'
-import {QrCode} from '../telas/qrCodeScanner'
+import {LoginTela} from '../telas/loginTela';
+import {QrCode} from '../telas/qrCodeScanner';
+import {ListaDeArvores} from '../telas/listaDeArvores';
 
 export function StackRoutes(){
     return (
@@ -25,6 +26,10 @@ export function StackRoutes(){
             <Screen
                 name="QrCode"
                 component={QrCode}
+            />
+            <Screen
+                name="ListaDeArvores"
+                component={ListaDeArvores}
             />
         </Navigator>
     );

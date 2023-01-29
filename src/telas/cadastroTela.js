@@ -72,10 +72,6 @@ const styles = StyleSheet.create({
     marginLeft: '30%',
     marginTop: '7%',
   },
-  botaoLogin: {
-    borderRadius: '10%',
-  },
-
   senha: {
     borderWidth:1,
     borderColor:'black',

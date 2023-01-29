@@ -1,14 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { StyleSheet, Text, View, Button, TextInput, Image, NavigationContainer, Alert} from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, Image, Alert,ScrollView} from 'react-native';
+
 
 export function LoginTela({navigation}) {
   const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
 
-
   function fazerLogin() {
-    if (login == "bruno" && senha == "bruno123") {
+    if (login == "" && senha == "") {
       navigation.navigate('CadastroTelas')
     }
     else
@@ -21,6 +20,7 @@ export function LoginTela({navigation}) {
       <View>
         <View style={styles.topoDaTela}>
           <Text style={styles.titulo}>Arborização Chapecó</Text>
+          {/* <ListaArvores/> */}
           <Image source={require('../../assets/imagens/logo.png')} style={styles.logo} /> 
         </View>
       </View>
@@ -39,6 +39,7 @@ export function LoginTela({navigation}) {
                 onSubmitEditing={(value) => setSenha(value.nativeEvent.text)}
               />
           </View>
+          {/* <CustomButton></CustomButton> */}
           <Button style={styles.botaoLogin} title='Login' color='black' onPress={fazerLogin}/>
       </View>
     </View>
