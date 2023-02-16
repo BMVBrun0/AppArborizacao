@@ -1,11 +1,9 @@
-import { useState } from 'react';
-import { StyleSheet, Text, View, Button, Image, Alert, Pressable } from 'react-native';
-
+import { StyleSheet, Text, View, Button, Image, Pressable } from 'react-native';
 
 export function TelaInicio({navigation}) {
 
   function entrar() {
-      navigation.navigate('MenusTela')
+    navigation.navigate('MenusTela')
   }
   return (
     <View style={styles.containerApp}>

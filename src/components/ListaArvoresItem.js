@@ -1,16 +1,21 @@
 import React from "react";
-import { View, Image, StyleSheet, Text } from "react-native";
-import { Arvores } from "../data/ArvoresList";
+import { View, Image, StyleSheet, Text, TouchableOpacity } from "react-native";
 
-export function ListaArvoresItem({ name, image, description }: Arvores) {
+export function ListaArvoresItem({ name, image, description ,icon, navigation}) {
+  function detalhes() {
+    navigation.navigate('MenusTela')
+  }
   return (
     <View style={styles.container}>
-      <Image style={{ width: 120, height: 100 }} source={image} />
+      <TouchableOpacity onPress={detalhes}>
+        <Image style={styles.imagem} source={image} />
+      </TouchableOpacity>
       <View style={styles.content}>
         <Text style={styles.title}>{name}</Text>
-        <Text numberOfLines={6} style={styles.description}>
+        <Image style={styles.icon} source={icon}></Image>
+        {/* <Text numberOfLines={6} style={styles.description}>
           {description}
-        </Text>
+        </Text> */}
       </View>
     </View>
   );
@@ -23,7 +28,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     paddingHorizontal: 16,
-    paddingVertical: 20,
+    paddingVertical: 5,
     marginTop:'5%'
   },
 
@@ -41,5 +46,13 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 16,
     color: "#000",
+  },
+  imagem:{
+    width: 140,
+    height: 110,
+  },
+  icon:{
+    width: '15%',
+    height:'15%',
   },
 });
