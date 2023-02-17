@@ -17,7 +17,6 @@ export function TelaInicio({navigation}) {
         <Pressable style={styles.button} onPress={entrar}>
             <Text style={styles.text}>Entrar</Text>
         </Pressable>
-          {/* <Button style={styles.botaoLogin} title='Entrar' color='black' onPress={fazerLogin}/> */}
       </View>
     </View>
   );

@@ -1,6 +1,4 @@
-import { useState } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
-
 
 export function ArvoreDetalhes({navigation}) {
 

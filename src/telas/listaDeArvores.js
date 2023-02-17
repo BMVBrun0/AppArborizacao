@@ -2,11 +2,15 @@ import React from "react";
 import {StyleSheet,View,FlatList,IconButton} from "react-native";
 import { ListaArvoresItem } from "../components/ListaArvoresItem";
 import { SeparatorItem } from "../components/SeparatorItem/SeparatorItem";
-import { Arvores, arvores } from "../data/ArvoresList";
+import { arvores } from "../data/ArvoresList";
 
 export function ListaDeArvores({navigation}) {
+  function cliquei(){
+    navigation.navigate('CardArvoresDetalhes')
+  }
+
   function renderItem({ item }) {
-    return <ListaArvoresItem {...item} />;
+    return <ListaArvoresItem {...item} clique={cliquei} />;
   }
   return (
     <View style={styles.container}>

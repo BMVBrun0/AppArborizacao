@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Image, StyleSheet, Text, Pressable } from "react-native";
 
-export function ListaArvoresItem({ name, image, description ,icon, clique}) {
+export function CardArvoresDetalhesItem({ name,image,icon,clique,description}) {
 
   function detalhes() {
     clique();
@@ -10,20 +10,37 @@ export function ListaArvoresItem({ name, image, description ,icon, clique}) {
     cliqueIcon();
   }
   return (
+  // <View style={styles.container}>
+  //   <Pressable onPress={detalhes}>
+  //     <Image style={styles.imagem} source={image} />
+  //   </Pressable>
+  //   <View style={styles.content}>
+  //     <Text style={styles.title}>{name}</Text>
+  //     <Pressable onPress={localizacao}>
+  //       <Image style={styles.icon} source={icon}></Image>
+  //     </Pressable>
+  //     <Text numberOfLines={6} style={styles.description}>
+  //       {description}
+  //     </Text>
+  //   </View>
+  // </View>
+
   <View style={styles.container}>
-    <Pressable onPress={detalhes}>
+  <View>
+    <View style={styles.topoDaTela}>
       <Image style={styles.imagem} source={image} />
-    </Pressable>
-    <View style={styles.content}>
-      <Text style={styles.title}>{name}</Text>
+    </View>
+  </View>
+  <View style={styles.meioDaTela}>
+    <Text style={styles.title}>{name}</Text>
       <Pressable onPress={localizacao}>
         <Image style={styles.icon} source={icon}></Image>
       </Pressable>
-      {/* <Text numberOfLines={6} style={styles.description}>
+      <Text numberOfLines={6} style={styles.description}>
         {description}
-      </Text> */}
-    </View>
+      </Text>
   </View>
+</View>
   );
 }
 

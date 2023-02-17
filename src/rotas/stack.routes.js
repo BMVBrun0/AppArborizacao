@@ -7,7 +7,7 @@ import {ListaArvoresItem} from '../components/ListaArvoresItem';
 import {TelaInicio} from '../telas/telaInicio';
 import {QrCode} from '../telas/qrCodeScanner';
 import {ListaDeArvores} from '../telas/listaDeArvores';
-import { ArvoreDetalhes } from "../telas/arvoreDetalhes";
+import { CardArvoresDetalhes } from "../telas/CardArvoresDetalhes";
 
 export function StackRoutes(){
     return (
@@ -21,8 +21,8 @@ export function StackRoutes(){
                 component={ListaArvoresItem}
             />
             <Screen
-                name= "ArvoreDetalhes"
-                component={ArvoreDetalhes}
+                name= "CardArvoresDetalhes"
+                component={CardArvoresDetalhes}
             />
             <Screen
                 name="MenusTela"
