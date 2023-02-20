@@ -8,11 +8,14 @@ export function MenusTela({navigation}) {
   function listaDeArvores(){
     navigation.navigate('ListaDeArvores')
   }
+  function voltar1() {
+    navigation.pop()
+  }
   return (
     <View style={styles.containerApp}>
       <View style={styles.topoDaTela}>
         <Text style={styles.titulo}>App Arborização</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={voltar1}>
             <Image source={require('../../assets/imagens/logo.png')} style={styles.arrow} />
         </TouchableOpacity>
       </View>
