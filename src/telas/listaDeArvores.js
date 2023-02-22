@@ -1,5 +1,5 @@
 import React from "react";
-import {StyleSheet,View,FlatList,IconButton, ScrollView} from "react-native";
+import {StyleSheet,View,FlatList,Linking} from "react-native";
 import { ListaArvoresItem } from "../components/ListaArvoresItem";
 import { SeparatorItem } from "../components/SeparatorItem/SeparatorItem";
 import { arvores } from "../data/ArvoresList";
@@ -9,7 +9,8 @@ export function ListaDeArvores({navigation}) {
     navigation.navigate('CardArvoresDetalhes')
   }
   function cliqueIcon(){
-    navigation.navigate('Mapa')
+    //navigation.navigate('Mapa')
+    Linking.openURL()
   }
 
   function renderItem({ item }) {
