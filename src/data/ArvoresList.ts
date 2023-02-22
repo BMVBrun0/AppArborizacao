@@ -23,7 +23,7 @@ export const arvores: Arvores[] = [
     description: "Essa é uma das árvores nativas indicadas para arborização urbana, já que seu porte pode chegar apenas a 9 m. Mas caso ela seja plantada em calçadas com fiação, é necessário podá-la regularmente.",
     icon:icon1,
     id:1,
-    localizacao:'',
+    localizacao:'https://goo.gl/maps/MwgeWNgJZ87JJGhe9',
   },
   {
     name: "Quaresmeira (Tibouchina granulosa)",

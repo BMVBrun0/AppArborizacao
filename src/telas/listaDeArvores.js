@@ -8,13 +8,15 @@ export function ListaDeArvores({navigation}) {
   function cliquei(){
     navigation.navigate('CardArvoresDetalhes')
   }
-  function cliqueIcon(){
+  function cliqueIcon(id){
     //navigation.navigate('Mapa')
-    Linking.openURL()
+    const url = arvores.filter(m => m.id == id)[0].localizacao;
+    console.log(url);
+    Linking.openURL(url)
   }
 
   function renderItem({ item }) {
-    return <ListaArvoresItem {...item} clique={cliquei} localizacao={cliqueIcon} />;
+    return <ListaArvoresItem {...item} clique={cliquei} localizacao={cliqueIcon(item.id)} />;
   }
   return (
     <View style={styles.container}>
