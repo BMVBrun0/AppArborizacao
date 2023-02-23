@@ -9,6 +9,7 @@ import { QrCode } from '../telas/qrCodeScanner';
 import { ListaDeArvores } from '../telas/listaDeArvores';
 import { CardArvoresDetalhes } from "../telas/CardArvoresDetalhes";
 import { Mapa } from "../telas/mapa";
+import { ArvoreDetalhes } from "../telas/arvoreDetalhes";
 
 export function StackRoutes(){
     return (
@@ -40,6 +41,10 @@ export function StackRoutes(){
             <Screen
                 name="ListaDeArvores"
                 component={ListaDeArvores}
+            />
+            <Screen
+                name="ArvoreDetalhes"
+                component={ArvoreDetalhes}
             />
         </Navigator>
     );

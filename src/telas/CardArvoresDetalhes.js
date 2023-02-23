@@ -1,7 +1,6 @@
 import React from "react";
 import {StyleSheet,View, FlatList, Image} from "react-native";
 import { CardArvoresDetalhesItem } from "../components/CardArvoresDetalhesItem";
-//import { SeparatorItem } from "../components/SeparatorItem/SeparatorItem";
 import { arvores } from "../data/ArvoresList";
 
 export function CardArvoresDetalhes({navigation}) {

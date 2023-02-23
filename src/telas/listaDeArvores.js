@@ -5,23 +5,26 @@ import { SeparatorItem } from "../components/SeparatorItem/SeparatorItem";
 import { arvores } from "../data/ArvoresList";
 
 export function ListaDeArvores({navigation}) {
-  function cliquei(){
-    navigation.navigate('CardArvoresDetalhes')
+
+  function cliquei(id){
+    navigation.navigate('ArvoreDetalhes', { id })
   }
-  function cliqueIcon(id){
+
+  async function cliqueIcon(id){
     //navigation.navigate('Mapa')
     const url = arvores.filter(m => m.id == id)[0].localizacao;
-    console.log(url);
-    Linking.openURL(url)
+    //console.log(url);
+    await Linking.openURL(url)
   }
 
   function renderItem({ item }) {
-    return <ListaArvoresItem {...item} clique={cliquei} localizacao={cliqueIcon(item.id)} />;
+    return <ListaArvoresItem {...item} clique={() => cliquei(item.id)} localizacao={() => cliqueIcon(item.id)}/>;
   }
   return (
     <View style={styles.container}>
       <FlatList ItemSeparatorComponent={SeparatorItem} data={arvores} keyExtractor={(item) => item.name} renderItem={renderItem}/>
     </View>
+
   );
 }
 

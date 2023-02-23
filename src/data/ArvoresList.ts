@@ -31,7 +31,7 @@ export const arvores: Arvores[] = [
     description:"A Quaresmeira é mais um dos tipos de árvores nativas indicadas para a arborização urbana, pois não apresenta raízes agressivas, tem fácil manutenção e crescimento lento. Sua altura fica entre 8 a ",
     icon:icon1,  
     id:2,
-    localizacao:'',
+    localizacao:'https://goo.gl/maps/6on3GtzwJuocXv3i6',
     },
   {
     name: "Jacarandá de Minas (Jacaranda Cuspidifolia)",

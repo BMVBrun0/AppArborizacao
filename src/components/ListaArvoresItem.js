@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Image, StyleSheet, Text, Pressable } from "react-native";
 
-export function ListaArvoresItem({ name, image, icon, clique, localizacao}) {
+export function ListaArvoresItem({ name, id, image, icon, clique, localizacao}) {
 
   function detalhes() {
     clique();

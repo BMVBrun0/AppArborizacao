@@ -1,8 +1,11 @@
+import { useRoute } from "@react-navigation/native";
 import React from "react";
 import { View, Image, StyleSheet, Text, Pressable } from "react-native";
 
 export function CardArvoresDetalhesItem({ name,image,icon,clique,description}) {
 
+  const naviganton = useRoute();
+  console.log(naviganton.params)
   function detalhes() {
     clique();
   }
