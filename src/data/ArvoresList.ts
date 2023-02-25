@@ -7,6 +7,7 @@ export interface Arvores {
   description: string;
   icon: ImageProps["source"];
   localizacao: string;
+  qrCode: string;
 }
 
 const arvore1 = require("../../assets/arvores/Screenshot_1.png");
@@ -24,6 +25,7 @@ export const arvores: Arvores[] = [
     icon:icon1,
     id:1,
     localizacao:'https://goo.gl/maps/MwgeWNgJZ87JJGhe9',
+    qrCode: '0074299057854',
   },
   {
     name: "Quaresmeira (Tibouchina granulosa)",
@@ -32,6 +34,7 @@ export const arvores: Arvores[] = [
     icon:icon1,  
     id:2,
     localizacao:'https://goo.gl/maps/6on3GtzwJuocXv3i6',
+    qrCode:'12345',
     },
   {
     name: "Jacarandá de Minas (Jacaranda Cuspidifolia)",
@@ -40,6 +43,7 @@ export const arvores: Arvores[] = [
     icon:icon1,
     id:3,
     localizacao:'',
+    qrCode:'12346',
   },
   {
     name: "Sibipiruna (Caesalpinia Peltophoroides)",
@@ -48,6 +52,7 @@ export const arvores: Arvores[] = [
     icon:icon1,
     id:4,
     localizacao:'',
+    qrCode:'12347',
   },
   {
     name: "Manacá da Serra (Tibouchina mutabilis)",
@@ -56,6 +61,7 @@ export const arvores: Arvores[] = [
     icon:icon1,
     id:5,
     localizacao:'',
+    qrCode:'12348',
   },
   {
     name: "Pata de Vaca (Bauhinia variegata)",
@@ -64,6 +70,7 @@ export const arvores: Arvores[] = [
     icon:icon1,
     id:6,
     localizacao:'',
+    qrCode:'12349',
   },
   {
     name: "Quaresmeira (Tibouchina granulosa)",
@@ -72,6 +79,7 @@ export const arvores: Arvores[] = [
     icon:icon1,  
     id:7,
     localizacao:'',
+    qrCode:'12340',
     },
   {
     name: "Jacarandá de Minas (Jacaranda Cuspidifolia)",
@@ -80,6 +88,7 @@ export const arvores: Arvores[] = [
     icon:icon1,
     id:8,
     localizacao:'',
+    qrCode:'123401',
   },
   {
     name: "Sibipiruna (Caesalpinia Peltophoroides)",
@@ -88,6 +97,7 @@ export const arvores: Arvores[] = [
     icon:icon1,
     id:9,
     localizacao:'',
+    qrCode:'123402',
   },
   {
     name: "Manacá da Serra (Tibouchina mutabilis)",
@@ -96,5 +106,6 @@ export const arvores: Arvores[] = [
     icon:icon1,
     id:10,
     localizacao:'',
+    qrCode:'123403',
   },
 ];

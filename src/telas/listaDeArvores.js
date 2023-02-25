@@ -11,15 +11,15 @@ export function ListaDeArvores({navigation}) {
   }
 
   async function cliqueIcon(id){
-    //navigation.navigate('Mapa')
     const url = arvores.filter(m => m.id == id)[0].localizacao;
-    //console.log(url);
     await Linking.openURL(url)
   }
+
 
   function renderItem({ item }) {
     return <ListaArvoresItem {...item} clique={() => cliquei(item.id)} localizacao={() => cliqueIcon(item.id)}/>;
   }
+  
   return (
     <View style={styles.container}>
       <FlatList ItemSeparatorComponent={SeparatorItem} data={arvores} keyExtractor={(item) => item.name} renderItem={renderItem}/>

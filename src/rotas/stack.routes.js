@@ -2,14 +2,13 @@ import { createNativeStackNavigator} from "@react-navigation/native-stack";
 const {Screen, Navigator} = createNativeStackNavigator();
 
 
-import { MenusTela } from '../telas/menusTela';
+import { MenusTela } from '../telas/MenusTela/index';
 import { ListaArvoresItem } from '../components/ListaArvoresItem';
-import { TelaInicio } from '../telas/telaInicio';
-import { QrCode } from '../telas/qrCodeScanner';
+import { TelaInicio } from '../telas/TelaInicio/index';
+import { QrCode } from '../telas/QrCodeScanner/index';
 import { ListaDeArvores } from '../telas/listaDeArvores';
-import { CardArvoresDetalhes } from "../telas/CardArvoresDetalhes";
 import { Mapa } from "../telas/mapa";
-import { ArvoreDetalhes } from "../telas/arvoreDetalhes";
+import { ArvoreDetalhes } from "../telas/ArvoreDetalhes/index";
 
 export function StackRoutes(){
     return (
@@ -25,10 +24,6 @@ export function StackRoutes(){
             <Screen
                 name="ListaArvoresItem"
                 component={ListaArvoresItem}
-            />
-            <Screen
-                name= "CardArvoresDetalhes"
-                component={CardArvoresDetalhes}
             />
             <Screen
                 name="MenusTela"
