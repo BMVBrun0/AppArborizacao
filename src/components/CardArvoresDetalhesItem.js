@@ -13,21 +13,6 @@ export function CardArvoresDetalhesItem({ name,image,icon,clique,description}) {
     cliqueIcon();
   }
   return (
-  // <View style={styles.container}>
-  //   <Pressable onPress={detalhes}>
-  //     <Image style={styles.imagem} source={image} />
-  //   </Pressable>
-  //   <View style={styles.content}>
-  //     <Text style={styles.title}>{name}</Text>
-  //     <Pressable onPress={localizacao}>
-  //       <Image style={styles.icon} source={icon}></Image>
-  //     </Pressable>
-  //     <Text numberOfLines={6} style={styles.description}>
-  //       {description}
-  //     </Text>
-  //   </View>
-  // </View>
-
   <View style={styles.container}>
   <View>
     <View style={styles.topoDaTela}>

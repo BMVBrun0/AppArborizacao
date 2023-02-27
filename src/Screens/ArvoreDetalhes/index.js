@@ -1,6 +1,6 @@
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image,SafeAreaView } from 'react-native';
 import { useRoute } from "@react-navigation/native";
-import { arvores } from "../../data/ArvoresList";
+import { arvores } from "../../Data/ArvoresList";
 import { useEffect, useState } from "react";
 import styles from '../ArvoreDetalhes/styles'
 
@@ -20,6 +20,7 @@ export function ArvoreDetalhes() {
     objeto == null ? <Text></Text> :
 
     <View style={styles.containerApp}>
+      <SafeAreaView></SafeAreaView>
       <View>
         <View style={styles.topoDaTela}>
           <Image source={objeto.image} style={styles.logo} /> 

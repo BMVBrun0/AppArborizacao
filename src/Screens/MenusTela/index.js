@@ -1,4 +1,4 @@
-import { Text, View, Button, TextInput, Image, TouchableOpacity, NavigationContainer } from 'react-native';
+import { Text, View, Button, TextInput, Image, TouchableOpacity, NavigationContainer,SafeAreaView } from 'react-native';
 import styles from '../MenusTela/styles'
 
 export function MenusTela({navigation}) {
@@ -13,6 +13,7 @@ export function MenusTela({navigation}) {
   }
   return (
     <View style={styles.containerApp}>
+      <SafeAreaView></SafeAreaView>
       <View style={styles.topoDaTela}>
         <Text style={styles.titulo}>App Arborização</Text>
         <TouchableOpacity onPress={voltar1}>

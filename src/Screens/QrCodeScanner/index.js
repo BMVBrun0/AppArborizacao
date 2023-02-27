@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, Button, Pressable } from 'react-native';
+import { Text, View, StyleSheet, Button, Pressable,SafeAreaView } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
-import { arvores } from "../../data/ArvoresList";
+import { arvores } from "../../Data/ArvoresList";
 import styles from '../QrCodeScanner/styles';
 //import { useRoute } from "@react-navigation/native";
 
@@ -55,6 +55,7 @@ export function QrCode({navigation}) {
 
   return (
     <View style={styles.container}>
+      <SafeAreaView></SafeAreaView>
       <View style={styles.barcodebox}>
         <BarCodeScanner
           onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}

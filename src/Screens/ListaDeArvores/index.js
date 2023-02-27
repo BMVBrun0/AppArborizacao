@@ -1,8 +1,9 @@
 import React from "react";
 import {StyleSheet,View,FlatList,Linking} from "react-native";
-import { ListaArvoresItem } from "../components/ListaArvoresItem";
-import { SeparatorItem } from "../components/SeparatorItem/SeparatorItem";
-import { arvores } from "../data/ArvoresList";
+import { ListaArvoresItem } from "../../components/ListaArvoresItem";
+import { SeparatorItem } from "../../components/SeparatorItem/SeparatorItem";
+import { arvores } from "../../Data/ArvoresList";
+import styles from '../ListaDeArvores/styles'
 
 export function ListaDeArvores({navigation}) {
 
@@ -22,15 +23,9 @@ export function ListaDeArvores({navigation}) {
   
   return (
     <View style={styles.container}>
-      <FlatList ItemSeparatorComponent={SeparatorItem} data={arvores} keyExtractor={(item) => item.name} renderItem={renderItem}/>
+      <FlatList data={arvores} keyExtractor={(item) => item.name} renderItem={renderItem}/>
     </View>
 
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
-});

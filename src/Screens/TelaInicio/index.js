@@ -1,4 +1,4 @@
-import { Text, View, Button, Image, Pressable } from 'react-native';
+import { Text, View, Button, Image, Pressable,SafeAreaView } from 'react-native';
 import styles from '../TelaInicio/styles';
 
 export function TelaInicio({navigation}) {
@@ -8,6 +8,7 @@ export function TelaInicio({navigation}) {
   }
   return (
     <View style={styles.containerApp}>
+      <SafeAreaView></SafeAreaView>
       <View>
         <View style={styles.topoDaTela}>
           <Text style={styles.titulo}>Arborização Chapecó</Text>

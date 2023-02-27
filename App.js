@@ -1,4 +1,4 @@
-import { Routes } from './src/rotas';
+import { Routes } from './src/Routes'
 
 export default function App() {
     return(
