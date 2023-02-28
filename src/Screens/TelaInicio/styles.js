@@ -20,6 +20,7 @@ export default StyleSheet.create({
       marginLeft:'20%',
       borderRadius:'50%',
       width:'60%',
+      marginTop:'40%'
     },
     text: {
       fontSize: 16,

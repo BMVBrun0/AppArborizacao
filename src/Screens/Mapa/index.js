@@ -1,6 +1,7 @@
 import MapView, {Marker} from 'react-native-maps';
 import { FAB } from 'react-native-paper';
-import { StyleSheet, View, SafeAreaView} from 'react-native';
+import { View, SafeAreaView} from 'react-native';
+import styles from '../Mapa/styles';
 
 export function Mapa({navigation}) {
   function voltar() {
@@ -8,6 +9,7 @@ export function Mapa({navigation}) {
   }
   return (
     <View style={styles.container}>
+    <SafeAreaView></SafeAreaView>
       <MapView style={styles.map} initialRegion={{latitude: -27.1042707,longitude: -52.6161499,latitudeDelta: 0.0922, longitudeDelta: 0.0421,}}>
           <Marker coordinate={{latitude: -27.1042707, longitude: -52.6161499,}}/>   
       </MapView>
@@ -15,19 +17,3 @@ export function Mapa({navigation}) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  map: {
-    width: '100%',
-    height: '100%',
-  },
-  fab: {
-    position: 'absolute',
-    left: '4%',
-    bottom: '87%',
-    backgroundColor:'white'
-  },
-});

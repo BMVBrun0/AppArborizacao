@@ -7,7 +7,7 @@ import { ListaArvoresItem } from '../components/ListaArvoresItem';
 import { TelaInicio } from '../Screens/TelaInicio/index';
 import { QrCode } from '../Screens/QrCodeScanner/index';
 import { ListaDeArvores } from '../Screens/ListaDeArvores/index';
-import { Mapa } from "../Screens/mapa";
+import { Mapa } from "../Screens/Mapa/index";
 import { ArvoreDetalhes } from "../Screens/ArvoreDetalhes/index";
 
 export function StackRoutes(){

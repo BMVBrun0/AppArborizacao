@@ -1,15 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, Button, Pressable,SafeAreaView } from 'react-native';
+import { Text, View, Button, Pressable,SafeAreaView } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import { arvores } from "../../Data/ArvoresList";
 import styles from '../QrCodeScanner/styles';
-//import { useRoute } from "@react-navigation/native";
 
 export function QrCode({navigation}) {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
   const [text, setText] = useState('Nada escaneado')
-  //const navigator = useRoute();
 
   const askForCameraPermission = () => {
     (async () => {
