@@ -1,6 +1,6 @@
 import { Text, View, Image,SafeAreaView } from 'react-native';
 import { useRoute } from "@react-navigation/native";
-import { arvores } from "../../Data/ArvoresList";
+import { arvores } from "../../data/ArvoresList";
 import { useEffect, useState } from "react";
 import styles from '../ArvoreDetalhes/styles'
 

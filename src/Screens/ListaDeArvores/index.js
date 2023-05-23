@@ -2,7 +2,7 @@ import React from "react";
 import {StyleSheet,View,FlatList,Linking} from "react-native";
 import { ListaArvoresItem } from "../../components/ListaArvoresItem";
 import { SeparatorItem } from "../../components/SeparatorItem/SeparatorItem";
-import { arvores } from "../../Data/ArvoresList";
+import { arvores } from "../../data/ArvoresList";
 import styles from '../ListaDeArvores/styles'
 
 export function ListaDeArvores({navigation}) {

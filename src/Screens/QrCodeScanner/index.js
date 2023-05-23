@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Text, View, Button, Pressable,SafeAreaView } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
-import { arvores } from "../../Data/ArvoresList";
+import { arvores } from "../../data/ArvoresList";
 import styles from '../QrCodeScanner/styles';
 
 export function QrCode({navigation}) {
