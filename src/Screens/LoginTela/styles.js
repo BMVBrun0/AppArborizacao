@@ -23,12 +23,9 @@ export default StyleSheet.create({
       alignItems: 'stretch',
       marginBottom: '40%'
     },
-    titulo: {
-      fontSize: '30%',
-      marginLeft: '13%',
-    },
+
     botaoLogin: {
-      borderRadius: '10%',
+      borderRadius: 10,
     },
     usuario: {
       borderWidth:1,

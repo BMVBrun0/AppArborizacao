@@ -31,16 +31,18 @@ export function ListaArvoresItem({ name, id, image, icon, clique, localizacao}) 
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
-    flexDirection: "row",
-    backgroundColor: "white",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: '5%',
-    paddingVertical: '5%',
-    marginTop:'4%',
-    borderRadius:'20%',
+    flex: 1,
+    flexDirection: 'row',
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 5,
+    paddingVertical: 10,
+    marginTop: 10,
+    marginBottom: 5,
+    borderRadius: 20,
   },
+  
 
   tela:{
     backgroundColor:'#8fbc8f'

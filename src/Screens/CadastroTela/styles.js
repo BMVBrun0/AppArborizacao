@@ -14,7 +14,7 @@ export default StyleSheet.create({
       width: '80%',
       height:'10%',
       marginLeft: '10%',
-      borderRadius: '10%'
+      borderRadius: 10
     },
     meioDaTela:{
       marginTop:'30%',
@@ -24,7 +24,7 @@ export default StyleSheet.create({
       flexDirection: 'column',
       justifyContent: 'space-around',
       backgroundColor: 'white',
-      borderRadius: '10%',
+      borderRadius: 10,
     },
   
     titulo: {
